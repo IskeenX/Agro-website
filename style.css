@@ -76,6 +76,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#navbar .logo-bag{
+  font-size: 20px;
+}
 #navbar li {
   list-style: none;
   padding: 0 20px;
@@ -148,6 +151,7 @@ body {
   border: 1px solid #cce7d0;
   border-radius: 4px;
   margin: 15px 0;
+  cursor: pointer;
 }
 #feature .fe-box:hover {
   box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
@@ -184,20 +188,19 @@ body {
   text-align: center;
 }
 #product1 .pro-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); /* Adjust the minimum and maximum width as needed */
+  gap: 10px; /* Adjust the gap between products */
 }
 #product1 .pro {
-  width: 23%;
-  min-width: 250px;
-  padding: 10px 12px;
+  width: 20%;
+  min-width: 210px;
+  padding: 20px 20px;
   border: 1px solid #cce7d0;
-  border-radius: 25px;
+  border-radius: 15px;
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
+  margin: 5px;
   transition: 0.02s ease;
   position: relative;
 }
@@ -237,9 +240,9 @@ body {
   color: #108B1C;
 }
 #product1 .pro .cart {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   border-radius: 50px;
   background-color: #e8f6ea;
   font-weight: 500;
@@ -249,6 +252,7 @@ body {
   bottom: 20px;
   right: 10px;
 }
+
 #sm-banner {
   display: flex;
   justify-content: space-between;
@@ -266,6 +270,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 30px;
+  margin-bottom: -35px;
 }
 #sm-banner .banner-box2 {
   background-image: url("./img/banner/b2.jpg");
@@ -296,6 +301,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 80px;
+  margin-bottom: 25px;
 }
 #banner3 .banner-box {
   display: flex;
@@ -332,6 +338,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f8f8
 }
 footer .col{
   display: flex;
@@ -341,28 +349,24 @@ footer .col{
 }
 footer h4 {
   font-size: 14px;
-  padding-bottom: 20px;
 }
 footer p {
   font-size: 13px;
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
 }
 footer a {
   font-size: 13px;
   text-decoration: none;
   color: #222;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 footer .follow {
-  margin-top: 20px;
+  font-size: 20px;
 }
 footer .follow i {
   color: #465b52;
   padding-right: 4px;
   cursor: pointer;
-  margin: 0 0 20px 0;
-}
-footer .install .phone {
   margin: 0 0 20px 0;
 }
 footer .follow i:hover,
@@ -395,7 +399,7 @@ footer .copyright {
     transition: 0.3s;
   }
   #navbar.active {
-    right: 0px;
+    right: -100px;
   }
   #navbar li {
     margin-bottom: 25px;
@@ -435,19 +439,24 @@ footer .copyright {
   }
   
   #product1 .pro-container {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
   }
   #product1 .pro {
-    margin: 15px;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 5px;
   }
 
   #sm-banner .banner-box {
     min-width: 100%;
     height: 30vh;
+    margin-bottom: 15px;
   }
   #sm-banner .banner-box2 {
-    margin-top: 15px;
-    margin-bottom: -20px;
+    margin-bottom: -40px;
   }
   #banner3 {
     padding: 0 40px;
@@ -459,6 +468,9 @@ footer .copyright {
 @media (max-width: 477px) {
   .section-p1 {
     padding: 20px;
+  }
+  #logo {
+    width: 100px;
   }
   #header {
     padding: 10px 30px;
@@ -482,11 +494,22 @@ footer .copyright {
     margin: 0 0 15px 0;
   }
 
+  #product1 .pro-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
   #product1 .pro {
-    width: 100%;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 5px;
   }
   #sm-banner .banner-box {
     height: 40vh;
+  }
+  #sm-banner .banner-box2 {
+    margin-bottom: -20px;
   }
   #banner3 {
     padding: 0 20px;
@@ -497,11 +520,7 @@ footer .copyright {
   footer {
     margin-top: 20px;
   }
-
-
+  footer .copyright {
+    text-align: start;
+  }
 }
-
-
-
-
-
