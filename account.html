@@ -12,14 +12,14 @@
 
 <body>
     <section id="header">
-        <a href="#"><img id="logo" src="./img/logo.png" class="logo" alt=""></a>
+        <a href="index.html"><img id="logo" src="./img/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="account.html" id="accountButton">Account</a></li>
                 <li id="lg-bag"><a class="logo-bag" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
@@ -30,341 +30,42 @@
         </div>
     </section>
     
-    <section id="hero">
-        <h4>Trade in offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>Save more time with coupons & up to 70$ off! </p>
-        <button class="white">Shop Now</button>
-    </section>
-
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="./img/features/f1.png" alt="">
-            <h6>Free Shipping</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f2.png" alt="">
-            <h6>Online Order</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f3.png" alt="">
-            <h6>Save Money</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f4.png" alt="">
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f5.png" alt="">
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f6.png" alt="">
-            <h6>24/7 Support</h6>
-        </div>
-    </section>
-
-    <section id="product1" class="section-p1">
-        <h2>Лучшие предложения</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
-            <div class="pro" onclick="window.location.href='sproduct.html'">
-                <img src="./img/products/f1.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="Login()">Авторизация</span>
+                            <span onclick="Register()">Регистрация</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="loginForm">
+                            <input type="text" placeholder="Логин">
+                            <i class="fas fa-user"></i>
+                            <input type="password" placeholder="Пароль">
+                            <i class="fas fa-lock"></i>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"><span>Запомнить меня</span></label>
+                                <a href="">Забыл пароль?</a>
+                            </div>
+                            <button type="submit" class="btn">Войти</button>
+                        </form>
+                        <form id="regForm">
+                            <input type="text" placeholder="Логин">
+                            <i class="fas fa-user"></i>
+                            <input type="password" placeholder="Пароль">
+                            <i class="fas fa-lock"></i>
+                            <input type="email" placeholder="Почта">
+                            <i class="fas fa-envelope"></i>
+                            <button type="submit" class="btn">Создать</button>
+                        </form>
                     </div>
-                    <h4>100 сом/шт</h4>
                 </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p2.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p3.png" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p4.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p5.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p6.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p7.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/p8.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
         </div>
-    </section>
-
-    <section id="product1" class="section-p1">
-        <h2>Новинки</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./img/products/n1.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n2.png" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n3.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n4.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n5.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n6.png" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n7.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="./img/products/n8.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>100 сом/шт</h4>
-                </div>
-                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at Nike</span>
-            <button class="white">Learn More</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>spring/summer</h4>
-            <h2>upcoming season</h2>
-            <span>The best classic dress is on sale at Nike</span>
-            <button class="white">Collection</button>
-        </div>
-    </section>
-
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h3>Spring/Summer 2024</h3>
-        </div>
-        <div class="banner-box banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trendy Prints</h3>
-        </div>
-    </section>
-
+    </div>
+    
     <footer class="section-p1">
         <div class="col">
             <h4>About</h4>
