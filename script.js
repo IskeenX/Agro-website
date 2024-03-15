@@ -64,7 +64,3 @@ document.addEventListener('DOMContentLoaded', function () {
         mainImage.setAttribute('src', newImageSrc);
     });
 });
-
-
-
-
