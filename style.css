@@ -10,7 +10,7 @@ html {
 }
 
 /* Global Styles */
-img {
+img :not([src$=".png"]){
   max-width: 100%;
   height: auto;
   content-visibility: auto;
