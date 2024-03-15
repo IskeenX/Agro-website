@@ -475,6 +475,105 @@ footer .copyright {
   line-height: 25px;
 }
 
+/* Contact Page*/
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+#contact-details .details {
+  width: 40%;
+}
+#contact-details .details span,
+#form-details form span {
+  font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 25px;
+  padding: 20px 0;
+}
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#contact-details .details li i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+#contact-details .details li p{
+  margin: 0;
+  font-size: 14px;
+}
+#contact-details .map {
+  width: 55%;
+  height: 400px;
+}
+#contact-details iframe {
+  width: 100%;
+  height: 100%;
+}
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 80px 20px 80px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+#form-details form button {
+  background-color: #45a049;
+  columns: #fff;
+}
+#form-details .people div {
+  padding-bottom: 25px;
+  margin: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+#form-details .people div img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+#form-details .people div p {
+  margin-right: 0;
+  font-size: 13px;
+  line-height: 25px;
+  white-space: nowrap;
+}
+#form-details .people div span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+#form-details input[type="text"] {
+  color: #000; /* Change to your desired color */
+}
+
 /* Account Page */
 .account-page {
   padding: 115px 0;
@@ -552,9 +651,9 @@ form input:focus {
   outline: none;
   box-shadow: 0 0 2px 0 rgba(255, 255, 255);
 }
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
   color: #fff; /* Change to your desired color */
 }
 form .btn {
@@ -812,6 +911,21 @@ form .btn:focus {
   #banner3 .banner-box {
     width: 32%;
   }
+
+  /* Contact Page */
+  #form-details {
+    padding: 50px;
+    margin: 0 40px 20px 40px;
+  }
+  #form-details form {
+    width: 90%;
+  }
+  #form-details .people {
+    width: 60%;
+  }
+  #form-details .people div p {
+    line-height: 20px;
+  }
 }
 @media (max-width: 477px) {
   .section-p1 {
@@ -904,5 +1018,34 @@ form .btn:focus {
   #subtotal {
     width: 100%;
     padding: 20px;
+  }
+
+  /* Contact Page */
+  #contact-details {
+    flex-direction: column;
+  }
+  #contact-details .details {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #contact-details .map {
+    width: 100%;
+  }
+  #form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #form-details form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #form-details .people div p {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  #form-details .people div {
+    padding-bottom: 0;
+    margin: 10px;
   }
 }
