@@ -94,15 +94,26 @@ body {
   align-items: center;
   justify-content: center;
 }
-#navbar .logo-bag{
+#navbar .logo-bag {
+  padding: 0 10px 0 10px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+#navbar .logo-bag p {
+  margin: 0 0 -5px 10px;
 }
 #navbar li {
   list-style: none;
   padding: 0 20px;
   position: relative;
 }
-#navbar li a {
+#navbar li a,
+#navbar .logo-bag p {
   text-decoration: none;
   font-size: 17px;
   font-weight: 700;
@@ -112,16 +123,6 @@ body {
 #navbar li a:hover,
 #navbar li a.active {
   color: #108B1C;
-}
-#navbar li a.active::after,
-#navbar li a:hover::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  background-color: #108B1C;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
 }
 
 #mobile {
