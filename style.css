@@ -121,8 +121,19 @@ body {
   transition: 0.3s ease;
 }
 #navbar li a:hover,
-#navbar li a.active {
+#navbar li a.active,
+#navbar .logo-bag:hover p {
   color: #108B1C;
+}
+#navbar li a.active:not(.logo-bag)::after,
+#navbar li a:hover:not(.logo-bag)::after {
+  content: "";
+  width: 22%;
+  height: 2px;
+  background-color: #108B1C;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
 
 #mobile {
