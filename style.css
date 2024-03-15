@@ -10,6 +10,12 @@ html {
 }
 
 /* Global Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  content-visibility: auto;
+  background-color: #eee;
+}
 h1 {
   font-size: 50px;
   line-height: 64px;
@@ -459,7 +465,7 @@ footer .copyright {
 
 /* Account Page */
 .account-page {
-  padding: 100px 0;
+  padding: 115px 0;
   background: url("./img/account/a1.jpg");
   background-size: cover;
   position: relative;
@@ -756,9 +762,6 @@ form .btn:focus {
   }
   #banner3 .banner-box {
     width: 100%;
-  }
-  footer {
-    margin-top: 20px;
   }
   footer .copyright {
     text-align: start;
