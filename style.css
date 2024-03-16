@@ -40,7 +40,7 @@ p {
   color: #465b52;
 }
 .section-p1 {
-  padding: 40px 80px;
+  padding: 30px 80px;
 }
 .section-m1 {
   margin: 40px 0;
@@ -147,7 +147,7 @@ body {
 /* Home Page */
 #hero {
   background-image: url("./img/hero-4.jpg");
-  height: 90vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
@@ -180,7 +180,7 @@ body {
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
   border: 1px solid #cce7d0;
   border-radius: 4px;
-  margin: 15px 0;
+  margin: 5px 0;
   cursor: pointer;
 }
 #feature .fe-box:hover {
@@ -300,7 +300,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 30px;
-  margin-bottom: -35px;
+  margin-bottom: -25px;
 }
 #sm-banner .banner-box2 {
   background-image: url("./img/banner/b2.jpg");
@@ -375,7 +375,7 @@ footer .col{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin: 0 60px 20px 60px;
 }
 footer h4 {
   font-size: 14px;
@@ -411,18 +411,21 @@ footer .copyright {
 /* Shop Page */
 #pagination {
   text-align: center;
+  margin: -20px 0 20px 0;
 }
 #pagination a {
   text-decoration: none;
   background-color: #108B1C;
-  padding: 15px 20px;
+  padding: 6px 10px;
   border-radius: 4px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 100;
+  font-size: 11px;
+  font-weight: bold;
 }
 #pagination a i {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /* Single Product */
@@ -800,7 +803,6 @@ form .btn:focus {
 }
 #coupon {
   width: 50%;
-  margin-bottom: 30px;
 }
 #coupon h3,
 #subtotal h3 {
@@ -821,7 +823,6 @@ form .btn:focus {
 }
 #subtotal {
   width: 50%;
-  margin-bottom: 30px;
   border: 1px solid #e2e9e1;
   padding: 30px;
 }
@@ -840,7 +841,10 @@ form .btn:focus {
 /* Start Media Query */
 @media (max-width: 799px) {
   .section-p1 {
-    padding: 40px 40px;
+    padding: 20px 40px;
+  }
+  h2 {
+    font-size: 35px;
   }
   #navbar {
     display: flex;
@@ -885,7 +889,7 @@ form .btn:focus {
   }
 
   #hero {
-    height: 70vh;
+    height: 51vh;
     padding: 0 80px;
     background-position: top 30% right 30%;
   }
@@ -894,7 +898,7 @@ form .btn:focus {
     justify-content: center;
   }
   #feature .fe-box {
-    margin: 15px 15px;
+    margin: 7px 15px;
   }
   
   #product1 .pro-container {
@@ -908,6 +912,10 @@ form .btn:focus {
     max-width: 100%;
     margin: 5px;
   }
+  #prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 20px;
+}
 
   #sm-banner .banner-box {
     min-width: 100%;
@@ -918,7 +926,7 @@ form .btn:focus {
     margin-bottom: -40px;
   }
   #banner3 {
-    padding: 0 40px;
+    padding: 30px 40px 0 40px;
   }
   #banner3 .banner-box {
     width: 32%;
@@ -938,6 +946,11 @@ form .btn:focus {
   #form-details .people div p {
     line-height: 20px;
   }
+
+  /* Cart Page */
+  #cart-add {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 477px) {
   .section-p1 {
@@ -953,11 +966,15 @@ form .btn:focus {
     font-size: 38px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 24px;
   }
+  p {
+    font-size: 12px;
+}
   #hero {
     padding: 0 20px;
-    background-position: 55%;
+    background-position: 75%;
+    height: 65vh;
   }
 
   #feature {
@@ -997,6 +1014,9 @@ form .btn:focus {
   #banner3 .banner-box {
     width: 100%;
   }
+  footer .col {
+    margin: 0 20px 20px 20px;
+  }
   footer .copyright {
     text-align: start;
   }
@@ -1009,6 +1029,7 @@ form .btn:focus {
   #prodetails .single-pro-image {
     width: 100%;
     margin-right: 0px;
+    margin-bottom: 15px;
   }
   #prodetails .single-pro-details {
     width: 100%;
@@ -1017,7 +1038,7 @@ form .btn:focus {
     font-size: 20px;
   }
   #prodetails .single-pro-details h4 {
-    padding: 15px 0 0 0;
+    padding: 15px 0 10px 0;
   }
 
   /* Cart Page */
@@ -1025,6 +1046,7 @@ form .btn:focus {
     flex-direction: column;
   }
   #coupon {
+    margin-bottom: 20px;
     width: 100%;
   }
   #subtotal {
@@ -1051,6 +1073,10 @@ form .btn:focus {
   #form-details form {
     width: 100%;
     margin-bottom: 30px;
+  }
+  #contact-details .details h2,
+  #form-details form h2 {
+    font-size: 16px;
   }
   #form-details .people div p {
     font-size: 17px;
