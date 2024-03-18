@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "company": "ФАСКО",
+        "name": "Грунт для рассады",
+        "price": "100 сом/шт",
+        "image": "img/products/p1.jpg"
+    },
+    {
+        "id": 2,
+        "company": "ФАСКО",
+        "name": "Грунт для томатов и перцев",
+        "price": "100 сом/шт",
+        "image": "img/products/p2.jpg"
+    },
+    {
+        "id": 3,
+        "company": "ФАСКО",
+        "name": "Грунт питательный Цветочный",
+        "price": "95 сом/шт",
+        "image": "img/products/p3.png"
+    },
+    {
+        "id": 4,
+        "company": "ФАСКО",
+        "name": "Грунт для овощей Огородник",
+        "price": "370 сом/шт",
+        "image": "img/products/p4.jpg"
+    },
+    {
+        "id": 5,
+        "company": "ФАСКО",
+        "name": "Грунт универсальный",
+        "price": "95 сом/шт",
+        "image": "img/products/p5.jpg"
+    },
+    {
+        "id": 6,    
+        "company": "ФАСКО",
+        "name": "Грунт универсальный Щедрая земля",
+        "price": "280 сом/шт",
+        "image": "img/products/p6.jpg"
+    },
+    {
+        "id": 7,
+        "company": "ФАСКО",
+        "name": "Субтрат питательный",
+        "price": "1050 сом/шт",
+        "image": "img/products/p7.jpg"
+    },
+    {
+        "id": 8,
+        "company": "ФАСКО",
+        "name": "Торф нейтрализованный",
+        "price": "1050 сом/шт",
+        "image": "img/products/p8.jpg"
+    }
+]
