@@ -1,58 +1,58 @@
 [
     {
         "id": 1,
+        "image": "./img/products/p1.jpg",
         "company": "ФАСКО",
         "name": "Грунт для рассады",
-        "price": "100 сом/шт",
-        "image": "img/products/p1.jpg"
+        "price": "100"
     },
     {
         "id": 2,
+        "image": "./img/products/p2.jpg",
         "company": "ФАСКО",
         "name": "Грунт для томатов и перцев",
-        "price": "100 сом/шт",
-        "image": "img/products/p2.jpg"
+        "price": "100"
     },
     {
         "id": 3,
-        "company": "ФАСКО",
-        "name": "Грунт питательный Цветочный",
-        "price": "95 сом/шт",
-        "image": "img/products/p3.png"
+        "image": "./img/products/p3.png",
+        "company": "ФАСКО Цветочный",
+        "name": "Грунт питательный",
+        "price": "95"
     },
     {
         "id": 4,
-        "company": "ФАСКО",
-        "name": "Грунт для овощей Огородник",
-        "price": "370 сом/шт",
-        "image": "img/products/p4.jpg"
+        "image": "./img/products/p4.jpg",
+        "company": "ФАСКО Огородник",
+        "name": "Грунт для овощей",
+        "price": "370"
     },
     {
         "id": 5,
+        "image": "./img/products/p5.jpg",
         "company": "ФАСКО",
         "name": "Грунт универсальный",
-        "price": "95 сом/шт",
-        "image": "img/products/p5.jpg"
+        "price": "95"
     },
     {
-        "id": 6,    
-        "company": "ФАСКО",
-        "name": "Грунт универсальный Щедрая земля",
-        "price": "280 сом/шт",
-        "image": "img/products/p6.jpg"
+        "id": 6,
+        "image": "./img/products/p6.jpg",
+        "company": "ФАСКО Щедрая земля",
+        "name": "Грунт универсальный",
+        "price": "280"
     },
     {
         "id": 7,
+        "image": "./img/products/p7.jpg",
         "company": "ФАСКО",
         "name": "Субтрат питательный",
-        "price": "1050 сом/шт",
-        "image": "img/products/p7.jpg"
+        "price": "1050"
     },
     {
         "id": 8,
+        "image": "./img/products/p8.jpg",
         "company": "ФАСКО",
         "name": "Торф нейтрализованный",
-        "price": "1050 сом/шт",
-        "image": "img/products/p8.jpg"
+        "price": "1050"
     }
 ]

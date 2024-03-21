@@ -10,23 +10,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="">
     <section id="header">
-        <a href="index.html"><img id="logo" src="./img/logo.png" class="logo" alt=""></a>
-        <div>
-            <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a onclick="Login()" href="account.html" id="accountButton">Account</a></li>
-                <li id="lg-bag" class="logo-bag-container"><a class="logo-bag" href="cart.html"><i class="far fa-shopping-bag"></i><p id="count">0</p></a></li>
-                <a href="#" id="close"><i class="far fa-times"></i></a>
-            </ul>
-        </div>
-        <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
-        </div>
+        <header>
+            <div id="title">
+                <img class="logo" src="./img/logo.png" href="index.html" alt="">
+            </div>
+            <div id="navbar">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="shop.html">Товары</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="account.html">Войти</a></li>
+            </div>
+            <div id="searchbar">
+                <i class="far fa-search"></i>
+                <input class="input-search" type="search" placeholder="Искать">
+            </div>
+            <div id="icon-cart">
+                <i class="far fa-shopping-bag active"></i>
+                <span>0</span>
+            </div>
+        </header>
     </section>
 
     <section id="cart" class="section-p1">
