@@ -10,228 +10,227 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="">
-    <section id="header">
-        <header>
-            <div id="title">
-                <img class="logo" src="./img/logo.png" href="index.html" alt="">
-            </div>
-            <div id="navbar">
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html"><img class="logo" src="./img/logo.png" alt="" width="180" height="auto"></a>
+
+            <div class="navbar">
                 <li><a class="active" href="index.html">Главная</a></li>
                 <li><a href="shop.html">Товары</a></li>
                 <li><a href="contact.html">Контакты</a></li>
                 <li><a href="account.html">Войти</a></li>
             </div>
-            <div id="searchbar">
-                <i class="far fa-search"></i>
-                <input class="input-search" type="search" placeholder="Искать">
+
+            <div class="searchbar">
+                <input type="text" placeholder="Искать...">
+                <a href="#"><i class="fas fa-search"></i></a>
             </div>
-            <div id="icon-cart">
+
+            <button class="cart-btn">
                 <i class="far fa-shopping-bag"></i>
-                <span>0</span>
-            </div>
-        </header>
-    </section>
+                <small class="cart-qty">0</small>
+            </button>
+        </div>
+    </nav>
 
-    <section id="banner1">
-    </section>
+    <main>
+        <div class="feature">
+            <div class="fe-box" style="--background-color: #DBF4F6;">
+                <img src="./img/features/f1.png" alt="">
+                <h6>Free Shipping</h6>
+            </div>
+            <div class="fe-box" style="--background-color: #F6DBEA;">
+                <img src="./img/features/f2.png" alt="">
+                <h6>Online Order</h6>
+            </div>
+            <div class="fe-box" style="--background-color: #EAF5D8;">
+                <img src="./img/features/f3.png" alt="">
+                <h6>Save Money</h6>
+            </div>
+            <div class="fe-box" style="--background-color: #ABD0E9;">
+                <img src="./img/features/f4.png" alt="">
+                <h6>Promotions</h6>
+            </div>
+            <div class="fe-box" style="--background-color: #E3DDF4;">
+                <img src="./img/features/f5.png" alt="">
+                <h6>Happy Sell</h6>
+            </div>
+            <div class="fe-box" style="--background-color: #F6E5DB;">
+                <img src="./img/features/f6.png" alt="">
+                <h6>24/7 Support</h6>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Лучшие предложения</h2>
+            <div class="products-showcase"></div>
+        </div>
+        <div class="container">
+            <h2>Новинки</h2>
+            <div class="products-showcase">
+                <div class="product">
+                    <img src="./img/products/n1.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n2.png" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n3.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n4.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n5.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n6.png" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n7.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="./img/products/n8.jpg" alt="">
+                    <div class="des">
+                        <span>ФАСКО</span>
+                        <h5>Грунт для рассады</h5>
+                        <h4 class="price">100 сом/шт</h4>
+                    </div>
+                    <button class="normal addCart">В корзину</button>
+                </div>
+            </div>
+        </div>
+        <div class="banner2">
+            <div class="banner-box" style="--background-image: url('./img/banner/b1.jpg');">
+                <!-- <h4>crazy deals</h4>
+                <h2>buy 1 get 1 free</h2>
+                <span>The best classic dress is on sale at Nike</span>
+                <button class="white">Learn More</button> -->
+            </div>
+            <div class="banner-box banner-box2" style="--background-image: url('./img/banner/b2.jpg');">
+                <!-- <h4>spring/summer</h4>
+                <h2>upcoming season</h2>
+                <span>The best classic dress is on sale at Nike</span>
+                <button class="white">Collection</button> -->
+            </div>
+        </div>
+        <div class="banner3">
+            <div class="banner-box" style="--background-image: url('./img/banner/b3.jpg');">
+                <!-- <h2>SEASONAL SALE</h2>
+                <h3>Winter Collection -50% OFF</h3> -->
+            </div>
+            <div class="banner-box banner-box2" style="--background-image: url('./img/banner/b4.jpg');">
+                <!-- <h2>NEW FOOTWEAR COLLECTION</h2>
+                <h3>Spring/Summer 2024</h3> -->
+            </div>
+            <div class="banner-box banner-box3" style="--background-image: url('./img/banner/b5.jpg');">
+                <!-- <h2>T-SHIRTS</h2>
+                <h3>New Trendy Prints</h3> -->
+            </div>
+        </div>
+    </main>
 
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="./img/features/f1.png" alt="">
-            <h6>Free Shipping</h6>
+    <div class="cart-overlay"></div>
+    <div class="cart">
+        <div class="cart-header">
+            <i class="fal fa-long-arrow-right cart-close"></i>
+            <h2>Корзина</h2>
         </div>
-        <div class="fe-box">
-            <img src="./img/features/f2.png" alt="">
-            <h6>Online Order</h6>
+        <div class="cart-body">
+            <div class="cart-item">
+                <img src="./img/products/f1.jpg" alt="">
+                <div class="cart-item-detail">
+                    <h3>Product name</h3>
+                    <h6>$99.99</h6>
+                    <div class="cart-item-amount">
+                        <i class="far fa-minus"></i>
+                        <span class="qty">0</span>
+                        <i class="far fa-plus"></i>
+                        <span class="cart-item-price">0</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="fe-box">
-            <img src="./img/features/f3.png" alt="">
-            <h6>Save Money</h6>
+        <div class="cart-footer">
+            <div>
+                <strong>Total</strong>
+                <span class="cart-total">0</span>
+            </div>
+            <button class="cart-clear">Очистить</button>
+            <button class="checkout">Оплатить</button>
         </div>
-        <div class="fe-box">
-            <img src="./img/features/f4.png" alt="">
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f5.png" alt="">
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="./img/features/f6.png" alt="">
-            <h6>24/7 Support</h6>
-        </div>
-    </section>
+    </div>
 
-    <section id="product1" class="section-p1">
-        <h2>Лучшие предложения</h2>
-        <div class="items-list"></div>
-    </section>
-
-    <section id="product1" class="section-p1">
-        <h2>Новинки</h2>
-        <div class="items-list">
-            <div class="item">
-                <img src="./img/products/n1.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
+    <footer>
+        <div class="container">
+            <div class="column">
+                <h4><strong>О компании</strong></h4>
+                <a href="#">Доставка</a>
+                <a href="contact.html">Связаться с нами</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Пользовательские соглашения</a>
             </div>
-            <div class="item">
-                <img src="./img/products/n2.png" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
+            <div class="column">
+                <h4><strong>Aккаунт</strong></h4>
+                <a href="account.html">Войти</a>
+                <a href="#">Корзина</a>
+                <a href="#">Мои заказы</a>
+                <a href="#">Поддержка</a>
             </div>
-            <div class="item">
-                <img src="./img/products/n3.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
-            </div>
-            <div class="item">
-                <img src="./img/products/n4.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
-            </div>
-            <div class="item">
-                <img src="./img/products/n5.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
-            </div>
-            <div class="item">
-                <img src="./img/products/n6.png" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
-            </div>
-            <div class="item">
-                <img src="./img/products/n7.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
-            </div>
-            <div class="item">
-                <img src="./img/products/n8.jpg" alt="">
-                <div class="des">
-                    <span>ФАСКО</span>
-                    <h5>Грунт для рассады</h5>
-                    <h4 class="price">100 сом/шт</h4>
-                </div>
-                <button class="addCart fal fa-shopping-cart"></button>
+            <div class="column address">
+                <p></i><strong>маг. Ошский р-к</strong></p>
+                <p>0500 77-04-41</p>
+                <p></i><strong>маг. Аламединский р-к</strong></p>
+                <p>0705 78-70-40</p>
+                <p><strong>Часы: </strong>10:00 - 18:00</p>
             </div>
         </div>
-    </section>
-
-    <section id="banner2" class="section-p1">
-        <div class="banner-box">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at Nike</span>
-            <button class="white">Learn More</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>spring/summer</h4>
-            <h2>upcoming season</h2>
-            <span>The best classic dress is on sale at Nike</span>
-            <button class="white">Collection</button>
-        </div>
-    </section>
-
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h3>Spring/Summer 2024</h3>
-        </div>
-        <div class="banner-box banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trendy Prints</h3>
-        </div>
-    </section>
-
-    <footer class="section-p1">
-        <div class="col">
-            <h4>О компании</h4>
-            <a href="#">Доставка</a>
-            <a href="contact.html">Связаться с нами</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Пользовательские соглашения</a>
-        </div>
-        <div class="col">
-            <h4>Aккаунт</h4>
-            <a href="account.html">Войти</a>
-            <a href="cart.html">Корзина</a>
-            <a href="#">Мои заказы</a>
-            <a href="#">Поддержка</a>
-        </div>
-        <div class="col install">
-            <p></i><strong>маг. Аламединский р-к</strong></p>
-            <p>0705 78-70-40</p>
-            <p></i><strong>маг. Ошский р-к</strong></p>
-            <p>0500 77-04-41</p>
-            <p><strong>Часы: </strong>10:00 - 18:00</p>
-            <div class="follow">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Все права защишены &copy;AgroGreenPlus 2024</p>
-        </div>
+        <p>Все права защишены &copy;AgroGreenPlus 2024</p>
     </footer>
-
-    <section id="cartId">
-        <div class="cart">
-            <div class="cart-header">
-                <i class="fal fa-long-arrow-right cart-close"></i>
-                <h2>Корзина</h2>
-            </div>
-            <div class="cart-body"></div>
-            <div class="cart-footer">
-                <div>
-                    <strong>Total</strong>
-                    <span class="cart-total">123 сом</span>
-                </div>
-                <button class="cart-clear">ОЧИСТИТЬ</button>
-                <button class="checkout">ОПЛАТИТЬ</button>
-            </div>
-        </div>
-    </section>
 
     <script src="script.js"></script>
 </body>
-
 
 </html>

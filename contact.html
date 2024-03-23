@@ -6,126 +6,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroGreenPlus</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="">
-    <section id="header">
-        <header>
-            <div id="title">
-                <img class="logo" src="./img/logo.png" href="index.html" alt="">
-            </div>
-            <div id="navbar">
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html"><img class="logo" src="./img/logo.png" alt="" width="180" height="auto"></a>
+
+            <div class="navbar">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="shop.html">Товары</a></li>
                 <li><a class="active" href="contact.html">Контакты</a></li>
                 <li><a href="account.html">Войти</a></li>
             </div>
-            <div id="searchbar">
-                <i class="far fa-search"></i>
-                <input class="input-search" type="search" placeholder="Искать">
+
+            <div class="searchbar">
+                <input type="text" placeholder="Искать...">
+                <a href="#"><i class="fas fa-search"></i></a>
             </div>
-            <div id="icon-cart">
+
+            <button class="cart-btn">
                 <i class="far fa-shopping-bag"></i>
-                <span>0</span>
-            </div>
-        </header>
-    </section>
+                <small class="cart-qty">0</small>
+            </button>
+        </div>
+    </nav>
 
-    <section id="contact-details" class="section-p1">
-        <div class="details">
-            <span>СВЯЗАТЬСЯ</span>
-            <h2>Посетите один из наших офисов или свяжитесь с нами сегодня</h2>
-            <h3>Главный Офис</h3>
-            <div>
-                <li>
-                    <i class="fal fa-map"></i>
-                    <p>ул.Буденного 181</p>
-                </li>
-                <li>
-                    <i class="fal fa-envelope"></i>
-                    <p>contact@gmail.com</p>
-                </li>
-                <li>
-                    <i class="fal fa-phone-alt"></i>
-                    <p>0 705 78-70-40</p>
-                </li>
-                <li>
-                    <i class="fal fa-clock"></i>
-                    <p>10:00 - 18:00</p>
-                </li>
+    <div class="contact">
+        <div id="contact-details">
+            <div class="details">
+                <span>СВЯЗАТЬСЯ</span>
+                <h2>Посетите один из наших офисов или свяжитесь с нами сегодня</h2>
+                <h3>Главный Офис</h3>
+                <div>
+                    <li>
+                        <i class="fal fa-map"></i>
+                        <p>ул.Буденного 181</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-envelope"></i>
+                        <p>contact@gmail.com</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-phone-alt"></i>
+                        <p>0 705 78-70-40</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-clock"></i>
+                        <p>10:00 - 18:00</p>
+                    </li>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.3571114218316!2d74.6355844916546!3d42.88641172691014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb79e5b845ea5%3A0xa169a6dc6fd94c9a!2z0JDQu9Cw0LzQtdC00LjQvSDQkdCw0LfQsNGA0Ys!5e0!3m2!1sen!2shu!4v1710526338929!5m2!1sen!2shu"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.3571114218316!2d74.6355844916546!3d42.88641172691014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb79e5b845ea5%3A0xa169a6dc6fd94c9a!2z0JDQu9Cw0LzQtdC00LjQvSDQkdCw0LfQsNGA0Ys!5e0!3m2!1sen!2shu!4v1710526338929!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-
-    <section id="form-details">
-        <form action="">
-            <span>ОСТАВЬТЕ СООБЩЕНИЕ</span>
-            <h2>Мы рады услышать ваше мнение</h2>
-            <input type="text" placeholder="Имя">
-            <input type="text" placeholder="Почта">
-            <input type="text" placeholder="Тема">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-            <button class="normal">Отправить</button>
-        </form>
-        <div class="people">
-            <div>
-                <img src="./img/people/female.jpg" alt="">
-                <p><span>Дегенбаева Алия</span>Директор <br>+996(705) 78-70-40 <br>contact@gmail.com</p>
-            </div>
-            <div>
-                <img src="./img/people/male.jpg" alt="">
-                <p><span>Дегенбаев Сапар</span>Директор <br>+996(705) 78-70-40 <br>contact@gmail.com</p>
-            </div>
-            <div>
-                <img src="./img/people/male.jpg" alt="">
-                <p><span>Дегенбаев Искендер</span>Программист <br>+996(705) 78-70-40 <br>contact@gmail.com</p>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="section-p1">
-        <div class="col">
-            <h4>О компании</h4>
-            <a href="#">Доставка</a>
-            <a href="contact.html">Связаться с нами</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Пользовательские соглашения</a>
-        </div>
-        <div class="col">
-            <h4>Aккаунт</h4>
-            <a href="account.html">Войти</a>
-            <a href="cart.html">Корзина</a>
-            <a href="#">Мои заказы</a>
-            <a href="#">Поддержка</a>
-        </div>
-        <div class="col install">
-            <p></i><strong>маг. Аламединский р-к</strong></p>
-            <p>0705 78-70-40</p>
-            <p></i><strong>маг. Ошский р-к</strong></p>
-            <p>0500 77-04-41</p>
-            <p><strong>Часы: </strong>10:00 - 18:00</p>
-            <div class="follow">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-pinterest-p"></i>
-                    <i class="fab fa-youtube"></i>
+        <div id="form-details">
+            <form action="">
+                <span>ОСТАВЬТЕ СООБЩЕНИЕ</span>
+                <h2>Мы рады услышать ваше мнение</h2>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Почта">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                <button class="normal">Отправить</button>
+            </form>
+            <div class="people">
+                <div>
+                    <img src="./img/people/female.jpg" alt="">
+                    <p><span><small><small>Директор</small></small><br>Алия</span>+996(705)
+                        78-70-40<br>contact@gmail.com</p>
+                </div>
+                <div>
+                    <img src="./img/people/male.jpg" alt="">
+                    <p><span><small><small>Директор</small></small><br>Сапар</span>+996(705)
+                        78-70-40<br>contact@gmail.com</p>
+                </div>
+                <div>
+                    <img src="./img/people/male.jpg" alt="">
+                    <p><span><small><small>Программист</small></small><br>Искендер</span>+996(705)
+                        78-70-40<br>contact@gmail.com</p>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Все права защишены &copy;AgroGreenPlus 2024</p>
+    </div>
+
+    <div class="cart-overlay"></div>
+    <div class="cart">
+        <div class="cart-header">
+            <i class="fal fa-long-arrow-right cart-close"></i>
+            <h2>Корзина</h2>
         </div>
+        <div class="cart-body">
+            <div class="cart-item">
+                <img src="./img/products/f1.jpg" alt="">
+                <div class="cart-item-detail">
+                    <h3>Product name</h3>
+                    <h6>$99.99</h6>
+                    <div class="cart-item-amount">
+                        <i class="far fa-minus"></i>
+                        <span class="qty">0</span>
+                        <i class="far fa-plus"></i>
+                        <span class="cart-item-price">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div>
+                <strong>Total</strong>
+                <span class="cart-total">0</span>
+            </div>
+            <button class="cart-clear">Очистить</button>
+            <button class="checkout">Оплатить</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="column">
+                <h4><strong>О компании</strong></h4>
+                <a href="#">Доставка</a>
+                <a href="contact.html">Связаться с нами</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Пользовательские соглашения</a>
+            </div>
+            <div class="column">
+                <h4><strong>Aккаунт</strong></h4>
+                <a href="account.html">Войти</a>
+                <a href="#">Корзина</a>
+                <a href="#">Мои заказы</a>
+                <a href="#">Поддержка</a>
+            </div>
+            <div class="column address">
+                <p></i><strong>маг. Ошский р-к</strong></p>
+                <p>0500 77-04-41</p>
+                <p></i><strong>маг. Аламединский р-к</strong></p>
+                <p>0705 78-70-40</p>
+                <p><strong>Часы: </strong>10:00 - 18:00</p>
+            </div>
+        </div>
+        <p>Все права защишены &copy;AgroGreenPlus 2024</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
-
 
 </html>

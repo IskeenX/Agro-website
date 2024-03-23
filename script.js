@@ -1,59 +1,54 @@
-const selectors = {
-    bar: document.getElementById('bar'),
-    close: document.getElementById('close'),
-    nav: document.getElementById('navbar'),
-    quantityInput: document.getElementById('quantityInput'),
-    loginForm: document.getElementById("loginForm"),
-    regForm: document.getElementById("regForm"),
-    indicator: document.getElementById("indicator"),
-    mainImage: document.getElementById('MainImg'),
-    colorSelect: document.getElementById('colorSelect'),
-    accountButton: document.getElementById('accountButton'),
-    cartBtn: document.getElementById('icon-cart'),//
-    cartClose: document.querySelector('.cart-close'),//
-    products: document.querySelector('.items-list'),//
-    cart: document.querySelector('.cart-show'),//
-    cartOverlay: document.querySelector(".cart-overlay"),//
-    cartBody: document.querySelector(".cart-body"),//
-    cartClear: document.querySelector(".cart-clear"),//
-    cartQty: document.querySelector('#icon-cart span'),//
-    cartTotal: document.querySelector(".cart-total"),//
-    smallImages: document.querySelectorAll('.small-img')
-};
 let products = [];
 let cart = [];
-
-//* event listeners
+//* Selectors
+const selectors = {
+    // Search
+    searchIcon: document.querySelector('.fa-search'),
+    searchbar: document.querySelector('.searchbar'),
+    body: document.querySelector('body'),
+    // Cart
+    products: document.querySelector('.products'),
+    cartBtn: document.querySelector(".cart-btn"),
+    cartQty: document.querySelector(".cart-qty"),
+    cartClose: document.querySelector(".cart-close"),
+    cart: document.querySelector(".cart"),
+    cartOverlay: document.querySelector(".cart-overlay"),
+    cartClear: document.querySelector(".cart-clear"),
+    cartBody: document.querySelector(".cart-body"),
+    cartTotal: document.querySelector(".cart-total"),
+    // Single product
+    quantityInput: document.querySelector('#quantityInput'),
+    mainImage: document.querySelector('#MainImg'),
+    colorSelect: document.querySelector('#colorSelect'),
+    smallImages: document.querySelectorAll('.small-img')
+};
+//* Event listeners
 const setupListeners = () => {
-    document.addEventListener("DOMContentLoaded", initStore);
-    // other events
-    selectors.bar.addEventListener('click', toggleNav);
-    selectors.close.addEventListener('click', toggleNav);
-    selectors.accountButton.addEventListener('click', moveIndicator);
-    // product event
-    selectors.products.addEventListener("click", addToCart);
-    // cart events
+    document.addEventListener("DOMContentLoaded", initStore)
+    // Search
+    selectors.searchIcon.addEventListener('click', showSearch);
+    selectors.body.addEventListener('click', hideSearch);
+    // Cart
     selectors.cartBtn.addEventListener("click", showCart);
     selectors.cartOverlay.addEventListener("click", hideCart);
     selectors.cartClose.addEventListener("click", hideCart);
     selectors.cartBody.addEventListener("click", updateCart);
     selectors.cartClear.addEventListener("click", clearCart);
+    // Product
+    selectors.products.addEventListener("click", addToCart);
 };
-
-//* event handlers
+//* Event handlers
 const initStore = () => {
     loadCart();
-    loadProducts("products.json")
-        .then(renderProducts)
-        .finally(renderCart);
+    loadProducts("https://fakestoreapi.com/products").then(renderProducts).finally(renderCart);
 };
 const showCart = () => {
-    selectors.cart.classList.add("show");
-    selectors.cartOverlay.classList.add("show");
+    selectors.cart.classList.add('show');
+    selectors.cartOverlay.classList.add('show');
 };
 const hideCart = () => {
-    selectors.cart.classList.remove("show");
-    selectors.cartOverlay.classList.remove("show");
+    selectors.cart.classList.remove('show');
+    selectors.cartOverlay.classList.remove('show');
 };
 const clearCart = () => {
     cart = [];
@@ -63,206 +58,167 @@ const clearCart = () => {
     setTimeout(hideCart, 500);
 };
 const addToCart = (e) => {
-    if (e.target.hasAttribute("data-id")) {
+    if (e.target.hasAttribute('data-id')) {
         const id = parseInt(e.target.dataset.id);
         const inCart = cart.find((x) => x.id === id);
-
         if (inCart) {
-            alert("Item is already in cart.");
+            alert('Item is already in cart.');
             return;
         }
-
         cart.push({ id, qty: 1 });
         saveCart();
         renderProducts();
         renderCart();
-        showCart();
     }
 };
 const removeFromCart = (id) => {
     cart = cart.filter((x) => x.id !== id);
-
-    // if the last item is remove, close the cart
+    // If the last item has been removed, cart will close
     cart.length === 0 && setTimeout(hideCart, 500);
-
     renderProducts();
 };
 const increaseQty = (id) => {
     const item = cart.find((x) => x.id === id);
     if (!item) return;
-
     item.qty++;
 };
 const decreaseQty = (id) => {
     const item = cart.find((x) => x.id === id);
     if (!item) return;
-
     item.qty--;
-
     if (item.qty === 0) removeFromCart(id);
 };
 const updateCart = (e) => {
-    if (e.target.hasAttribute("data-btn")) {
-        const cartItem = e.target.closest(".cart-item");
+    if (e.target.hasAttribute('data-btn')) {
+        const cartItem = e.target.closest('.cart-item');
         const id = parseInt(cartItem.dataset.id);
         const btn = e.target.dataset.btn;
 
-        btn === "incr" && increaseQty(id);
-        btn === "decr" && decreaseQty(id);
-
+        btn === 'incr' && increaseQty(id);
+        btn === 'decr' && decreaseQty(id);
         saveCart();
         renderCart();
     }
 };
 const saveCart = () => {
-    localStorage.setItem("online-store", JSON.stringify(cart));
+    localStorage.setItem('online-store', JSON.stringify(cart));
 };
 const loadCart = () => {
-    cart = JSON.parse(localStorage.getItem("online-store")) || [];
+    cart = JSON.parse(localStorage.getItem('online-store')) || [];
 };
-
-//* render functions
+const showSearch = () => {
+    selectors.searchbar.classList.toggle('show-input');
+    const input = selectors.searchbar.querySelector('input');
+    if (selectors.searchbar.classList.contains('show-input')) {
+        input.focus();
+    } else {
+        input.blur();
+    }
+};
+const hideSearch = (e) => {
+    if (!selectors.searchbar.contains(e.target)) {
+        selectors.searchbar.classList.remove('show-input');
+    }
+};
+//* Render functions
 const renderCart = () => {
-    // show cart qty in navbar
-    const cartQty = cart.reduce((sum, item) => {
-        return sum + item.qty;
-    }, 0);
-
+    // Show cart qty
+    const cartQty = cart.reduce((sum, item) => { return sum + item.qty; }, 0);
     selectors.cartQty.textContent = cartQty;
-    selectors.cartQty.classList.toggle("visible", cartQty);
-
-    // show cart total
+    selectors.cartQty.classList.toggle('visible', cartQty);
+    // Show cart total
     selectors.cartTotal.textContent = calculateTotal().format();
-    // show empty cart
+    // Show empty cart
     if (cart.length === 0) {
-        selectors.cartBody.innerHTML =
-            '<div class="cart-empty">Your cart is empty.</div>';
+        selectors.cartBody.innerHTML = '<div class="cart-empty">Корзина пуста.</div>';
         return;
     }
-    // show cart items
-    selectors.cartBody.innerHTML = cart
-        .map(({ id, qty }) => {
-            // get product info of each cart item
-            const product = products.find((x) => x.id === id);
-
-            const { title, image, price } = product;
-
-            const amount = price * qty;
-
-            return `
-          <div class="cart-item" data-id="${id}">
-            <img src="${image}" alt="${title}" />
-            <div class="cart-item-detail">
-              <h3>${title}</h3>
-              <h5>${price.format()}</h5>
-              <div class="cart-item-amount">
-                <i class="bi bi-dash-lg" data-btn="decr"></i>
-                <span class="qty">${qty}</span>
-                <i class="bi bi-plus-lg" data-btn="incr"></i>
-  
-                <span class="cart-item-price">
-                  ${amount.format()}
-                </span>
-              </div>
-            </div>
-          </div>`;
-        })
-        .join("");
+    // Show cart items
+    selectors.cartBody.innerHTML = cart.map(({ id, qty }) => {
+        // Get product info of each cart item
+        const product = products.find((x) => x.id === id);
+        const { title, image, price } = product;
+        const amount = price * qty;
+        return `
+            <div class="cart-item" data-id=${id}>
+                <img src="${image}" alt="${title}">
+                <div class="cart-item-detail">
+                    <h3>${title}</h3>
+                    <h6>${price.format()}</h6>
+                    <div class="cart-item-amount">
+                        <i class="far fa-minus" data-btn="decr"></i>
+                        <span class="qty">${qty}</span>
+                        <i class="far fa-plus" data-btn="incr"></i>
+                        <span class="cart-item-price">${amount.format()}</span>
+                    </div>
+                </div>
+            </div>`;
+    }).join("");
 };
 const renderProducts = () => {
-    selectors.products.innerHTML = products
-        .map((product) => {
-            const { id, title, image, price } = product;
-
-            // check if product is already in cart
-            const inCart = cart.find((x) => x.id === id);
-
-            // make the add to cart button disabled if already in cart
-            const disabled = inCart ? "disabled" : "";
-
-            // change the text if already in cart
-            const text = inCart ? "Added in Cart" : "Add to Cart";
-
-            return `
-      <div class="product">
-        <img src="${image}" alt="${title}" />
-        <h3>${title}</h3>
-        <h5>${price.format()}</h5>
-        <button ${disabled} data-id=${id}>${text}</button>
-      </div>
-      `;
-        })
+    selectors.products.innerHTML = products.map(product => {
+        const { id, title, image, price } = product;
+        // Check if product is already in cart
+        const inCart = cart.find((x) => x.id === id);
+        // Make the add to cart button disabled if already in cart
+        const disabled = inCart ? 'disabled' : '';
+        // Change the text if already in cart
+        const text = inCart ? 'Добавлено' : 'В корзину';
+        return `
+        <div class="product">
+            <img src="${image}" alt="${title}">
+            <div class="des">
+                <h5>${title}</h5>
+                <h4 class="price">${price.format()}</h4>
+            </div>
+            <button class="normal addCart" ${disabled} data-id=${id}>${text}</button>
+        </div>
+        `;
+    })
         .join("");
 };
-
-//* api functions
-const loadProducts = async (jsonURL) => {
+//* API functions
+const loadProducts = async (apiURL) => {
     try {
-        const response = await fetch(jsonURL);
+        const response = await fetch(apiURL);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return await response.json();
+        products = await response.json();
+        console.log(products);
     } catch (error) {
         console.error("Fetch error:", error);
-        return null;
     }
 };
-
-//* helper functions
+//* Helper functions
 const calculateTotal = () => {
-    return cart
-        .map(({ id, qty }) => {
-            const { price } = products.find((x) => x.id === id);
-
-            return qty * price;
-        })
-        .reduce((sum, number) => {
-            return sum + number;
-        }, 0);
+    return cart.map(({ id, qty }) => {
+        const { price } = products.find((x) => x.id === id);
+        return qty * price;
+    }).reduce((sum, number) => { return sum + number; }, 0);
 };
-
 Number.prototype.format = function () {
-    return this.toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
+    return this.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'KGS',
     });
 };
 
-//* initialize
+//* Initialize
 setupListeners();
 
-// Functions
-function moveIndicator() {
-    selectors.indicator.style.transform = `translateX(20.5px)`;
-}
-function Register() {
-    selectors.regForm.style.transform = "translateX(0px)"
-    selectors.loginForm.style.transform = "translateX(0px)"
-    selectors.indicator.style.transform = "translateX(153.5px)"
-}
-function Login() {
-    selectors.regForm.style.transform = "translateX(300px)"
-    selectors.loginForm.style.transform = "translateX(300px)"
-    selectors.indicator.style.transform = "translateX(20.5px)"
-}
-function toggleNav() {
-    selectors.nav.classList.toggle('active');
-}
-
-
-// Single Product Page
-if (selectors.smallImages.length > 0) {
-    selectors.smallImages.forEach(function (smallImg) {
-        smallImg.addEventListener('click', function () {
-            const newImageSrc = this.getAttribute('src');
-            selectors.mainImage.setAttribute('src', newImageSrc);
-        });
-    });
-    selectors.colorSelect.addEventListener('change', function () {
-        const selectedColor = this.value;
-        const matchingImage = document.querySelector(`.small-img[data-color="${selectedColor}"]`);
-        const newImageSrc = matchingImage.getAttribute('src');
-        selectors.mainImage.setAttribute('src', newImageSrc);
-    });
-}
+// // Single Product Page
+// if (selectors.smallImages.length > 0) {
+//     selectors.smallImages.forEach(function (smallImg) {
+//         smallImg.addEventListener('click', function () {
+//             const newImageSrc = this.getAttribute('src');
+//             selectors.mainImage.setAttribute('src', newImageSrc);
+//         });
+//     });
+//     selectors.colorSelect.addEventListener('change', function () {
+//         const selectedColor = this.value;
+//         const matchingImage = document.querySelector(`.small-img[data-color="${selectedColor}"]`);
+//         const newImageSrc = matchingImage.getAttribute('src');
+//         selectors.mainImage.setAttribute('src', newImageSrc);
+//     });
+// }
