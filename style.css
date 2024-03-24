@@ -14,6 +14,7 @@
   --green: #4CAF50;
   --green-dark1: #108B1C;
   --gold: #9d9171;
+  --placeholder: #999999;
   --transition: all 0.3s ease-in-out;
 }
 html {
@@ -50,6 +51,9 @@ img :not([src$=".png"]){
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #919191;
+}
+::placeholder {
+  color: var(--placeholder);
 }
 span {
   color: var(--gray);
@@ -104,7 +108,7 @@ button {
 .navbar li a.active,
 .cart-btn .far:hover,
 .cart-btn .far.active,
-.searchbar .fas:hover,
+.searchbar .search-big:hover,
 footer a:hover {
   color: var(--green-dark1);
 } 
@@ -147,30 +151,71 @@ nav .container {
 }
 .searchbar {
   display: flex;
-  cursor: pointer;
   border-radius: 20px;
   align-items: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
-.searchbar input {
-  width: 0;
-  border: none;
-  outline: none;
-  font-weight: 500;
-  font-size: 16px;
-  background: transparent;
-  transition: var(--transition);
-}
-.searchbar.show-input input {
-  width: 200px;
-  padding: 0 0 3px 20px;
-}
-.searchbar a .fas {
+.searchbar .search-big {
   color: var(--black);
   font-size: 24px;
   font-weight: 500;
   transition: var(--transition);
   padding: 13px 13px;
+}
+.search-box .row {
+  width: 0;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  opacity: -1;
+}
+.search-box input {
+  flex: 1;
+  width: 0;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--gray);
+  transition: var(--transition);
+  padding: 0 5px;
+}
+.searchbar.show-input .row {
+  width: 300px;
+  padding: 0 0 3px 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  visibility: visible;
+}
+.search-box button {
+  border: 0;
+  outline: 0;
+  padding: 1px;
+  margin-right: 10px;
+  transition: none;
+}
+.search-box .search-small {
+  width: 25px;
+  color: var(--placeholder);
+  font-size: 16px;
+}
+.search-box .result-box ul {
+  background: var(--white-dark2);
+  position: absolute;
+  width: 300px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.search-box .result-box ul li {
+  list-style: none;
+  color: var(--black);
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.search-box .result-box ul li:hover {
+  background: rgba(216, 216, 216, 0.4);
 }
 .cart-btn {
   padding: 0;

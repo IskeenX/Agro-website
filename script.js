@@ -1,11 +1,17 @@
 let products = [];
 let cart = [];
+let availableProducts = [];
+fetch('products.json')
+    .then(response => response.json())
+    .then(products => { availableProducts = products; })
+    .catch(error => console.error('Error fetching products:', error));
 //* Selectors
 const selectors = {
     // Search
-    searchIcon: document.querySelector('.fa-search'),
+    searchIcon: document.querySelector('.search-big'),
     searchbar: document.querySelector('.searchbar'),
-    body: document.querySelector('body'),
+    resultsBox: document.querySelector('.result-box'),
+    inputBox: document.querySelector('#input-box'),
     // Cart
     products: document.querySelector('.products'),
     cartBtn: document.querySelector(".cart-btn"),
@@ -27,7 +33,6 @@ const setupListeners = () => {
     document.addEventListener("DOMContentLoaded", initStore)
     // Search
     selectors.searchIcon.addEventListener('click', showSearch);
-    selectors.body.addEventListener('click', hideSearch);
     // Cart
     selectors.cartBtn.addEventListener("click", showCart);
     selectors.cartOverlay.addEventListener("click", hideCart);
@@ -115,11 +120,6 @@ const showSearch = () => {
         input.blur();
     }
 };
-const hideSearch = (e) => {
-    if (!selectors.searchbar.contains(e.target)) {
-        selectors.searchbar.classList.remove('show-input');
-    }
-};
 //* Render functions
 const renderCart = () => {
     // Show cart qty
@@ -203,7 +203,34 @@ Number.prototype.format = function () {
         currency: 'KGS',
     });
 };
-
+// Search
+selectors.inputBox.onkeyup = function () {
+    let result = [];
+    let input = selectors.inputBox.value.trim().toLowerCase();
+    if (input.length) {
+        result = availableProducts.filter((product) => {
+            return (
+                product.name.toLowerCase().startsWith(input) ||
+                product.company.toLowerCase().startsWith(input) ||
+                product.id.toString().startsWith(input)
+            );
+        });
+    }
+    display(result);
+    if (!result.length) {
+        selectors.resultsBox.innerHTML = '';
+    }
+    function display(result) {
+        const content = result.map((product) => {
+            return "<li onclick='selectInput(\"" + product.name + "\")'>" + product.name + "</li>";
+        });
+        selectors.resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+    }
+};
+function selectInput(name) {
+    selectors.inputBox.value = name;
+    selectors.resultsBox.innerHTML = '';
+}
 //* Initialize
 setupListeners();
 

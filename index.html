@@ -23,8 +23,14 @@
             </div>
 
             <div class="searchbar">
-                <input type="text" placeholder="Искать...">
-                <a href="#"><i class="fas fa-search"></i></a>
+                <div class="search-box">
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Искать..." autocomplete="off">
+                        <button><i class="fas fa-search search-small"></i></button>
+                    </div>
+                    <div class="result-box"></div>
+                </div>
+                <a href="#"><i class="fas fa-search search-big"></i></a>
             </div>
 
             <button class="cart-btn">
@@ -33,7 +39,7 @@
             </button>
         </div>
     </nav>
-
+    
     <main>
         <div class="feature">
             <div class="fe-box" style="--background-color: #DBF4F6;">
@@ -61,6 +67,7 @@
                 <h6>24/7 Support</h6>
             </div>
         </div>
+        
         <div class="container">
             <h2>Лучшие предложения</h2>
             <div class="products-showcase"></div>
