@@ -1,6 +1,7 @@
 let products = [];
 let cart = [];
 let availableProducts = [];
+// This is the fetch from the json file
 fetch('products.json')
     .then(response => response.json())
     .then(products => { availableProducts = products; })
@@ -178,6 +179,7 @@ const renderProducts = () => {
         .join("");
 };
 //* API functions
+// This is the fetch from the API
 const loadProducts = async (apiURL) => {
     try {
         const response = await fetch(apiURL);
@@ -233,19 +235,3 @@ function selectInput(name) {
 }
 //* Initialize
 setupListeners();
-
-// // Single Product Page
-// if (selectors.smallImages.length > 0) {
-//     selectors.smallImages.forEach(function (smallImg) {
-//         smallImg.addEventListener('click', function () {
-//             const newImageSrc = this.getAttribute('src');
-//             selectors.mainImage.setAttribute('src', newImageSrc);
-//         });
-//     });
-//     selectors.colorSelect.addEventListener('change', function () {
-//         const selectedColor = this.value;
-//         const matchingImage = document.querySelector(`.small-img[data-color="${selectedColor}"]`);
-//         const newImageSrc = matchingImage.getAttribute('src');
-//         selectors.mainImage.setAttribute('src', newImageSrc);
-//     });
-// }
